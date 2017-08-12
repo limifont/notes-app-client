@@ -46,7 +46,7 @@ class Home extends Component {
       i !== 0
         ? ( <ListGroupItem
               key={note.noteId}
-              href={`/notes/${note.noteId}`}
+              href={`/notes/${note.notesId}`}
               onClick={this.handleNoteClick}
               header={note.content.trim().split('\n')[0]}>
                 { "Created: " + (new Date(note.createdAt)).toLocaleString() }
