@@ -85,6 +85,7 @@ class App extends Component {
 
     if (AWS.config.credentials) {
       AWS.config.credentials.clearCachedId();
+      AWS.config.credentials = new AWS.CognitoIdentityCredentials({ });
     }
 
     this.updateUserToken(null);
