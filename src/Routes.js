@@ -13,7 +13,7 @@ import NotFound from './containers/NotFound';
 
 export default ({ childProps }) => (
   <Switch>
-    <AppliedRoute path="/" exact component={Home} props={childProps} />
+    <AuthenticatedRoute path="/" exact component={Home} props={childProps} />
     <UnauthenticatedRoute path="/login" exact component={Login} props={childProps} />
     <UnauthenticatedRoute path="/signup" exact component={Signup} props={childProps} />
     <AuthenticatedRoute path="/notes/new" exact component={NewNote} props={childProps} />
